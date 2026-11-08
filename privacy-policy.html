@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how TryLia handles account information, photos, camera access, product links, and virtual try-on data.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Privacy Policy | TryLia</title>
+  <style>
+:root{color-scheme:light;--ink:#18212f;--muted:#5d6878;--line:#e6eaf0;--brand:#6657d9;--surface:#f7f8fc;--card:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--surface);color:var(--ink);font:16px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.site-header{background:#fff;border-bottom:1px solid var(--line)}
+.header-inner{max-width:980px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;font-size:1.2rem;letter-spacing:-.03em;color:var(--ink)}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem}
+main{max-width:900px;margin:42px auto;padding:0 22px 64px}
+.hero,.document{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,5vw,48px);box-shadow:0 8px 30px rgba(25,35,55,.04)}
+.eyebrow{color:var(--brand);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.12;letter-spacing:-.045em;margin:.45em 0}
+h2{font-size:1.28rem;line-height:1.35;margin:2.1em 0 .55em;letter-spacing:-.02em}
+p,li{color:#354052}
+.muted,.meta{color:var(--muted)}
+.meta{font-size:.92rem}
+.lead{font-size:1.1rem;color:#465266;max-width:690px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:26px}
+.card{display:block;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;color:var(--ink);transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);border-color:#b8b0f3;text-decoration:none}
+.card h2{margin:0 0 8px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.pill{display:inline-block;background:#f0efff;color:#5144bd;border-radius:999px;padding:5px 11px;font-size:.82rem;font-weight:700}
+.notice{background:#f6f5ff;border-left:4px solid var(--brand);padding:14px 18px;border-radius:8px;margin:22px 0}
+ul{padding-left:1.35rem}
+footer{max-width:900px;margin:0 auto;padding:0 22px 36px;color:var(--muted);font-size:.9rem}
+hr{border:0;border-top:1px solid var(--line);margin:30px 0}
+@media(max-width:600px){.header-inner{align-items:flex-start;flex-direction:column}nav{gap:12px}main{margin:22px auto}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">TryLia</a>
+    <nav aria-label="Legal navigation">
+      <a href="index.html">Legal home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article class="document">
+  <span class="eyebrow">TryLia · Privacy</span>
+  <h1>Privacy Policy</h1>
+  <p class="lead">This policy explains what information TryLia handles when you use its virtual eyewear try-on features, how that information is used, and the choices available to you.</p>
+  <p class="meta"><strong>Effective date:</strong> November 7, 2026 &nbsp;·&nbsp; <strong>Last updated:</strong> November 7, 2026</p>
+
+  <h2>1. About this policy</h2>
+  <p>This Privacy Policy applies to the TryLia mobile application and its related features, including virtual glasses try-on, photo import, product-image import by URL, accounts, and saved styles. In this policy, “TryLia,” “we,” “us,” and “our” refer to the team responsible for the app. “You” means a person who uses TryLia.</p>
+  <p>By using TryLia, you acknowledge that you have read this policy. If you do not agree with the practices described here, please do not use the relevant features.</p>
+
+  <h2>2. Information we handle</h2>
+  <p>The information handled depends on which features you choose to use.</p>
+  <ul>
+    <li><strong>Account information:</strong> If you choose to create an account, account-related information may include your email address, display name, and authentication information. Supabase Auth is used to manage authentication.</li>
+    <li><strong>Photos and eyewear images:</strong> If you take or select a photo for a try-on, or import an eyewear image, the image is processed to provide the feature. Cloudinary is used for image hosting and image transformations, including background removal where supported.</li>
+    <li><strong>Product and image URLs:</strong> If you paste a link to an eyewear product or image, TryLia uses the link to obtain or display the relevant image for the try-on workflow. The linked website may have its own privacy practices and terms.</li>
+    <li><strong>Saved styles and preferences:</strong> If you use saving features, information may include saved products or frames, favorites, custom colour values, and fitting adjustments such as scale, position, and rotation.</li>
+    <li><strong>Technical information:</strong> Basic device and app information, such as device model, operating system version, and connectivity status, may be handled to support app operation and troubleshoot technical problems.</li>
+  </ul>
+
+  <h2>3. Camera, photos, and virtual try-on</h2>
+  <p>TryLia requests camera access when you choose a feature that needs the camera, such as taking a photo or using the live virtual try-on mirror. Photo-library access is requested when you choose to select an existing image. You can manage these permissions through your device settings, although turning them off will prevent the related features from working.</p>
+  <p>During a live try-on session, the fitting experience uses face-position information, such as eye and face landmarks, to position eyewear on the preview. The app is designed to perform live face-landmark tracking on your device. According to the current app design, the live camera feed and face-landmark vectors are not recorded or sent to TryLia's servers as part of that live tracking process, and the temporary tracking data is cleared when you leave the live AR view.</p>
+  <p>This description of live tracking does not mean that every photo you choose to upload stays on your device. Images submitted for image processing or hosting may be sent to Cloudinary as described in this policy.</p>
+  <p>TryLia does not request microphone access for its current try-on features and does not provide an audio-recording feature.</p>
+
+  <h2>4. How we use information</h2>
+  <p>We use information handled through the app for purposes such as:</p>
+  <ul>
+    <li>Displaying eyewear on a live camera preview or on a photo you select.</li>
+    <li>Importing, preparing, and displaying eyewear images, including supported background-removal transformations.</li>
+    <li>Operating account sign-in and keeping account-related information available.</li>
+    <li>Saving styles and fitting preferences when you choose to use those features.</li>
+    <li>Maintaining app functionality, diagnosing errors, and improving the reliability of the try-on experience.</li>
+    <li>Responding to support requests and handling account or privacy requests.</li>
+  </ul>
+  <p>We do not sell personal information. We do not use imported photos or live face-tracking information to build advertising profiles.</p>
+
+  <h2>5. Service providers and third-party services</h2>
+  <p>TryLia uses the following services to support app functionality:</p>
+  <ul>
+    <li><strong>Supabase:</strong> Used for authentication, database services, and private storage associated with account and saved-content features. Access controls, including row-level security where configured, are used to restrict access to private records.</li>
+    <li><strong>Cloudinary:</strong> Used to process and host images submitted for supported image workflows, including image transformations such as background removal. Images sent to Cloudinary are handled under Cloudinary's applicable terms and privacy documentation.</li>
+    <li><strong>Tryonixs:</strong> Provides the client-side WebGL fitting engine used in the in-app try-on experience to position 3D glasses models on the camera preview.</li>
+  </ul>
+  <p>These providers process information as needed to provide their services to TryLia. Their own privacy policies and terms may also apply to their services. We encourage you to review the providers' current documentation.</p>
+
+  <h2>6. Product links and external websites</h2>
+  <p>TryLia lets you paste a product or image URL to bring eyewear imagery into the app. A URL may identify content hosted by a third-party website. TryLia does not control those websites, their availability, their content, or their privacy practices. Opening or using a third-party link may be subject to that website's own terms and policies.</p>
+  <p>TryLia does not represent that every website or product URL will work. Some sites may block access, change their content, or require a sign-in. Only submit links and images that you are permitted to use.</p>
+
+  <h2>7. Storage, security, and retention</h2>
+  <p>Information stored through Supabase or processed or hosted through Cloudinary is handled by those providers in accordance with the services configured for TryLia. Communications with supported backend services are intended to use HTTPS/TLS encryption in transit. We use access controls intended to protect private account and saved-content records.</p>
+  <p>No method of transmission or storage is completely secure. We cannot promise absolute security, but we take reasonable steps appropriate to operating the app and its services.</p>
+  <p>We retain account information and saved content while needed to provide the service and maintain your account. Images and other content handled by third-party providers may remain subject to the retention and deletion settings and processes of those providers. We do not state a fixed retention period where one has not been established.</p>
+
+  <h2>8. Your choices and account deletion</h2>
+  <ul>
+    <li><strong>Guest use:</strong> You can explore supported guest features without creating an account. Some features, such as account-based saving or synchronisation, may require an account.</li>
+    <li><strong>Device permissions:</strong> You can revoke camera or photo-library permissions in your device settings. The related feature may no longer be available.</li>
+    <li><strong>Account deletion:</strong> If you have an account, you can request deletion from within TryLia by going to <strong>Profile → Settings → Delete account</strong> and following the confirmation steps.</li>
+    <li><strong>Privacy requests:</strong> You can contact us to ask about access, correction, or deletion of personal information, subject to applicable law and the information we are able to verify.</li>
+  </ul>
+  <p>When an account deletion request is completed, we delete the account information and associated saved content that we control, subject to any information we must retain for legal, security, or legitimate operational reasons. Copies held by service providers may take additional time to be removed under their processes and applicable settings.</p>
+
+  <h2>9. International processing</h2>
+  <p>Our service providers may process or store information in countries other than the country where you live. Where applicable, we take steps intended to provide appropriate protection for information transferred internationally. The safeguards available may depend on the provider and the applicable law.</p>
+
+  <h2>10. Children's privacy</h2>
+  <p>TryLia is not designed for children under 13, or the higher minimum age where required by local law. We do not knowingly collect personal information from children in violation of applicable law. If you believe a child has provided personal information to us, contact us so we can review the request and take appropriate action.</p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>We may update this Privacy Policy when the app, our practices, or legal requirements change. We will post the updated version on this page and revise the “Last updated” date. Please review this page from time to time.</p>
+
+  <h2>12. Contact us</h2>
+  <p>For privacy questions or requests, contact:</p>
+  <p><strong>Email:</strong> <a href="mailto:support@tryonixs.com">support@tryonixs.com</a><br>
+  <strong>Website:</strong> <a href="https://www.tryonixs.com/">https://www.tryonixs.com/</a><br>
+  <strong>Team:</strong> TryLia Team</p>
+  <div class="notice"><strong>Please note:</strong> This policy is written from the product details supplied for TryLia. Review it against the final app build and the exact settings of each provider before publishing.</div>
+  <p><a href="index.html">← Back to legal home</a></p>
+</article>
+</main>
+
+<footer>
+  <hr>
+  <p>© 2026 TryLia. For questions about these documents, contact <a href="mailto:support@trylia.com">support@trylia.com</a>.</p>
+</footer>
+</body>
+</html>
