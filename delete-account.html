@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request deletion of your TryLia account and associated personal data.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>Delete Account | TryLia</title>
+  <style>
+:root{color-scheme:light;--ink:#18212f;--muted:#5d6878;--line:#e6eaf0;--brand:#6657d9;--surface:#f7f8fc;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink);font:16px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+.site-header{background:#fff;border-bottom:1px solid var(--line)}
+.header-inner{max-width:980px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;font-size:1.2rem;letter-spacing:-.03em;color:var(--ink)}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:.94rem}
+main{max-width:900px;margin:42px auto;padding:0 22px 64px}
+.document{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,5vw,48px);box-shadow:0 8px 30px rgba(25,35,55,.04)}
+.eyebrow{color:var(--brand);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.12;letter-spacing:-.045em;margin:.45em 0}
+.lead{font-size:1.1rem;color:#465266;max-width:720px}
+.form-grid{display:grid;gap:20px;margin-top:30px}
+label,.field-label{display:block;font-weight:650;margin-bottom:7px}
+input[type=email],select,textarea{width:100%;border:1px solid #cfd5df;border-radius:10px;padding:12px 14px;background:#fff;color:var(--ink);font:inherit}
+input[type=email]:focus,select:focus,textarea:focus{outline:3px solid rgba(102,87,217,.2);border-color:var(--brand)}
+textarea{min-height:130px;resize:vertical}
+.hint{font-size:.9rem;color:var(--muted);margin:5px 0 0}
+.checkbox-row{display:flex;gap:11px;align-items:flex-start}
+.checkbox-row input{width:18px;height:18px;flex:0 0 auto;margin:5px 0 0;accent-color:var(--brand)}
+.checkbox-row label{font-weight:400;margin:0}
+.notice{background:#f6f5ff;border-left:4px solid var(--brand);padding:14px 18px;border-radius:8px;margin:24px 0;color:#354052}
+button{border:0;border-radius:10px;background:var(--brand);color:#fff;padding:13px 20px;font:inherit;font-weight:700;cursor:pointer}
+button:hover{background:#5546c7}
+button:focus-visible{outline:3px solid rgba(102,87,217,.35);outline-offset:3px}
+button:disabled{opacity:.65;cursor:wait}
+.message{border-radius:10px;padding:14px 16px;margin-top:18px}
+.message[hidden]{display:none}
+#form-container[hidden]{display:none}
+.message.error{background:#fff1f0;border:1px solid #f0c4c0;color:#8f2820}
+.message.success{background:#effaf3;border:1px solid #b9e2c6;color:#205d34}
+.request-id{overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Consolas,monospace}
+footer{max-width:900px;margin:0 auto;padding:0 22px 36px;color:var(--muted);font-size:.9rem}
+hr{border:0;border-top:1px solid var(--line);margin:30px 0}
+footer nav{gap:12px 20px}
+.honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+@media(max-width:600px){.header-inner{align-items:flex-start;flex-direction:column}nav{gap:12px}main{margin:22px auto}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">TryLia</a>
+    <nav aria-label="Legal navigation">
+      <a href="delete-account.html" aria-current="page">Delete Account</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="document">
+    <span class="eyebrow">Account support</span>
+    <h1>Request Account Deletion</h1>
+    <p class="lead">If you no longer wish to use TryLia, you can submit a request to delete your account and associated personal data. Our support team will review your request and may contact you to verify ownership before processing it.</p>
+    <div class="notice">Submitting this form does not immediately delete your account. We will verify account ownership before processing any deletion.</div>
+
+    <form id="deletion-form" novalidate>
+      <div id="form-container" class="form-grid">
+      <div>
+        <label for="email">Registered Email Address <span aria-hidden="true">*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" maxlength="254" required>
+      </div>
+      <div>
+        <label for="reason">Reason for Deletion</label>
+        <select id="reason" name="reason">
+          <option value="">Select a reason (optional)</option>
+          <option value="I no longer use TryLia.">I no longer use TryLia.</option>
+          <option value="I have privacy concerns.">I have privacy concerns.</option>
+          <option value="I am experiencing problems.">I am experiencing problems.</option>
+          <option value="I created another account.">I created another account.</option>
+          <option value="Other.">Other.</option>
+        </select>
+      </div>
+      <div>
+        <label for="additional-information">Additional Information</label>
+        <textarea id="additional-information" name="additionalInformation" maxlength="3000" aria-describedby="information-hint"></textarea>
+        <p id="information-hint" class="hint">Optional. Do not include your password or other sensitive sign-in information.</p>
+      </div>
+      <div class="checkbox-row">
+        <input id="confirmation" name="confirmation" type="checkbox" required>
+        <label for="confirmation">I confirm that I am the owner of this account and request its deletion. <span aria-hidden="true">*</span></label>
+      </div>
+      <div class="honeypot" aria-hidden="true">
+        <label for="company-website">Leave this field empty</label>
+        <input id="company-website" name="companyWebsite" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <div>
+        <button id="submit-button" type="submit">Submit Deletion Request</button>
+      </div>
+      </div>
+    </form>
+    <div id="form-message" class="message" role="status" aria-live="polite" hidden></div>
+  </article>
+</main>
+
+<footer>
+  <hr>
+  <p>© 2026 TryLia. For help, contact <a href="mailto:contact@tryonixs.com">contact@tryonixs.com</a>.</p>
+  <nav aria-label="Footer navigation">
+    <a href="delete-account.html" aria-current="page">Delete Account</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+    <a href="https://www.tryonixs.com/">Tryonixs website</a>
+  </nav>
+</footer>
+
+<script>
+(() => {
+  const EMAIL_RELAY_URL = "https://formsubmit.co/ajax/contact@tryonixs.com";
+  const form = document.getElementById("deletion-form");
+  const formContainer = document.getElementById("form-container");
+  const button = document.getElementById("submit-button");
+  const message = document.getElementById("form-message");
+  let submitting = false;
+
+  function showMessage(text, kind) {
+    message.textContent = text;
+    message.className = `message ${kind}`;
+    message.hidden = false;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (submitting) return;
+
+    form.elements.email.value = form.elements.email.value.trim();
+    if (!form.reportValidity()) return;
+
+    submitting = true;
+    button.disabled = true;
+    button.textContent = "Submitting…";
+    message.hidden = true;
+
+    try {
+      const requestId = crypto.randomUUID();
+      const response = await fetch(EMAIL_RELAY_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: "TryLia — New Account Deletion Request",
+          _template: "table",
+          _honey: form.elements.companyWebsite.value,
+          _replyto: form.elements.email.value,
+          requestId,
+          email: form.elements.email.value,
+          reason: form.elements.reason.value,
+          additionalInformation: form.elements.additionalInformation.value,
+          confirmation: "The requester confirms they own this account and request its deletion.",
+          submittedAt: new Date().toISOString()
+        }),
+        signal: AbortSignal.timeout(20000)
+      });
+
+      const result = await response.json().catch(() => ({}));
+      const relayMessage = typeof result.message === "string" ? result.message : "";
+      if (!response.ok || (result.success !== "true" && result.success !== true)) {
+        throw new Error(relayMessage || "We couldn't send your request. Please try again or email contact@tryonixs.com.");
+      }
+
+      formContainer.hidden = true;
+      showMessage("Email is sent. We'll respond you in a while.", "success");
+    } catch (error) {
+      const errorMessage = error instanceof Error && error.name === "TimeoutError"
+        ? "The request timed out. Please wait a moment before trying again, or email contact@tryonixs.com."
+        : error instanceof TypeError
+          ? "We couldn't reach the request service. Check your connection and try again, or email contact@tryonixs.com."
+          : error instanceof Error
+            ? error.message
+            : "We couldn't submit your request. Please try again or email contact@tryonixs.com.";
+      showMessage(errorMessage, "error");
+    } finally {
+      submitting = false;
+      if (!formContainer.hidden) {
+        button.disabled = false;
+        button.textContent = "Submit Deletion Request";
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
